@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using GeneralStore.MVC.Models;
+using GeneralStore.Data;
 
 namespace GeneralStore.MVC.Controllers
 {
