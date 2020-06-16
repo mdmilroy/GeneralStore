@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -175,7 +176,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -235,7 +239,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -252,24 +265,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GeneralStore.Contracts\GeneralStore.Contracts.csproj">
-      <Project>{a6fbc85b-3b36-4d07-9444-a49bcaad2965}</Project>
-      <Name>GeneralStore.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GeneralStore.Data\GeneralStore.Data.csproj">
-      <Project>{5afac3ce-6710-43e1-9a43-8c1e631346ed}</Project>
-      <Name>GeneralStore.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GeneralStore.Models\GeneralStore.Models.csproj">
-      <Project>{1c92dc4b-3e27-4eed-b7b6-92dcd7366d6c}</Project>
-      <Name>GeneralStore.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GeneralStore.Services\GeneralStore.Services.csproj">
-      <Project>{7f0a04b6-5f62-4881-8281-681b020a8e3d}</Project>
-      <Name>GeneralStore.Services</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
