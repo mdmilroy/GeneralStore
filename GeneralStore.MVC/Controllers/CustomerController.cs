@@ -16,7 +16,7 @@ namespace GeneralStore.MVC.Controllers
         {
             List<Customer> customerList = _db.Customers.ToList();
             List<Customer> orderedList = customerList.OrderBy(customer => customer.LastName).ToList();
-            return View();
+            return View(orderedList);
         }
 
         // GET: Customer/Create
